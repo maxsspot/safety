@@ -138,7 +138,9 @@ const success = (position) => {
     const accuracy = position.coords.accuracy;
     console.log(`lat: ${latitude} long: ${longitude}`);
 }
-
+const error = (error) => {
+    console.log(`Unable to retrieve your location due to ${error.code}: ${error.message}`);
+}
 const geoOptions = {
     enableHighAccuracy: true
 };
