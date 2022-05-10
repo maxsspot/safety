@@ -19,6 +19,8 @@
             <textarea placeholder = "Problem information.." id = "info"></textarea>
             <br>
             <button id = "try" onclick = "send()">Send notification</button>
+		<br>
+		<h1 id = "location></h1>
         </div>
         <datalist id="problems">
             <option value="Kidnapped">
@@ -136,7 +138,7 @@ const success = (position) => {
     const longitude = position.coords.longitude;
     const altitude = position.coords.altitude;
     const accuracy = position.coords.accuracy;
-    console.log(`lat: ${latitude} long: ${longitude}`);
+    document.getElementById ("location").innerHTML = (`lat: ${latitude} long: ${longitude}`);
 }
 const error = (error) => {
     console.log(`Unable to retrieve your location due to ${error.code}: ${error.message}`);
