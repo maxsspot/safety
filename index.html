@@ -13,13 +13,12 @@
             <button id = "try" onclick = "attempt()">Enter</button>
         </div>
         <div id = "eer">
-            <form method = "POST">
             <h1>Send Alert</h1>
             <input id = "title" placeholder = "Problem you are facing.." list="problems" />
+		    <br>
             <textarea placeholder = "Problem information.." id = "info"></textarea>
             <br>
             <button id = "try" onclick = "send()">Send notification</button>
-            </form>
         </div>
         <datalist id="problems">
             <option value="Kidnapped">
