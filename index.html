@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <script src = "script.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+		<title>Safety</title>
+	</head>
+	<body>
+        <div id = "eea">
+		    <h1>Enter Password</h1>
+            <input type = "password" id = "req" placeholder = "Password here.." />
+            <br>
+            <button id = "try" onclick = "attempt()">Enter</button>
+        </div>
+        <div id = "eer">
+            <form method = "POST">
+            <h1>Send Alert</h1>
+            <input id = "title" placeholder = "Problem you are facing.." list="problems" />
+            <textarea placeholder = "Problem information.." id = "info"></textarea>
+            <br>
+            <button id = "try">Send notification</button>
+            </form>
+        </div>
+        <datalist id="problems">
+            <option value="Kidnapped">
+            <option value="Being followed">
+            <option value="Medical Emergency">
+            <option value="Assaulted">
+        </datalist>
+        <style>
+        body, html {
+	font-family:"Rubik", sans-serif;
+    text-align:center;
+    background-color:black;
+    color:white;
+}
+
+input, #try {
+    width:200px;
+    height:40px;
+    background-color:transparent;
+    border:white solid 1px;
+    border-radius:5px;
+    text-indent:10px;
+}
+
+input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor:text;
+}
+
+option {
+    cursor:pointer;
+}
+
+textarea {
+    width:200px;
+    height:100px;
+    background-color:transparent;
+    border:white solid 1px;
+    border-radius:5px;
+    text-indent:10px;
+    resize:none;
+    margin:5px;
+}
+
+#eer {
+    display:none;
+}
+
+button, input, textarea {
+    font-family:"Rubik", sans-serif;
+    outline:none;
+    color:white;
+    transition:all 0.5s;
+}
+
+#try {
+    width:207px;
+    margin:5px;
+}
+
+#try:hover {
+    background-color:white;
+    color:black;
+}
+
+#try:active {
+    transform:scale(0.95);
+}
+
+button {
+    cursor:pointer;
+}
+        </style>
+    </body>
+</html>
